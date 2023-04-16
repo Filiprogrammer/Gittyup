@@ -373,8 +373,8 @@ RepoView::RepoView(const git::Repository &repo, MainWindow *parent)
           });
 
   // Refresh when the workdir changes.
-  RepositoryWatcher *watcher = new RepositoryWatcher(repo, this);
-  /*connect(notifier, &git::RepositoryNotifier::referenceUpdated, watcher,
+  /*RepositoryWatcher *watcher = new RepositoryWatcher(repo, this);
+  connect(notifier, &git::RepositoryNotifier::referenceUpdated, watcher,
           &RepositoryWatcher::cancelPendingNotification);
   connect(mCommits, &CommitList::statusChanged, watcher,
           &RepositoryWatcher::cancelPendingNotification);*/
